@@ -37,8 +37,8 @@ def cmd_doctor() -> int:
         print(f"[{status}] {label}")
         all_ok = all_ok and exists
 
-    api_key_present = bool(os.getenv("OPENAI_API_KEY"))
-    print(f"[{'OK' if api_key_present else 'WARN'}] OPENAI_API_KEY set")
+    api_key_present = bool(os.getenv("GROQ_API_KEY"))
+    print(f"[{'OK' if api_key_present else 'WARN'}] GROQ_API_KEY set")
 
     if all_ok:
         print("Phase 0 foundation checks passed.")
